@@ -1,0 +1,497 @@
+/* -------------- Universal Selectors -------------- */
+/* Selects all elements in HTML document */
+
+* {
+  box-sizing: border-box;
+}
+
+/* -------------- Class Selectors -------------- */
+.title {
+  font-family: elephant;
+  font-size: 300%;
+  text-align: center;
+}
+
+.intro {
+  font-size: 30px;
+  background-color: purple;
+  text-align: justify;
+}
+
+.subtitle {
+  font-size: 0.8em;
+  text-align: right;
+}
+
+/* Box Shadow attribute */
+/* Measurements the same as with text-shadow attribute */
+.box1, .box2{
+  background-color: purple;
+  height: 100px;
+  width: 200px;
+  box-shadow: 5px 5px 10px black;
+}
+
+.box2 {
+  box-shadow: 0px 0px 10px 5px black;
+}
+
+.box3, .box4, .box5, .box6, .box7, .box8 {
+  width: 200px;
+  height: 100px;
+}
+
+/* Specifying Margin Measurements */
+.box3 {
+  background-color: yellow;
+  margin-bottom: 50px;
+}
+
+.box4 {
+  background-color: green;
+  margin-left: 100px;
+}
+
+.box5 {
+  background-color: lightblue;
+  margin: auto; /* Applied on all sides */
+}
+
+.box6 {
+  background-color: gray;
+  margin: 100px;
+}
+
+.box7 {
+  background-color: orange;
+  margin: 100px 300px; /* Up/Down Left/Right */
+}
+
+.box8 {
+  background-color: olive;
+  margin: 200px 100px 300px 50px;
+  /* Measurements specified in clockwise direction */
+}
+
+/* Padding */
+.p1 {
+  padding-top: 50px;
+}
+
+.p2 {
+  padding: 50px 100px;
+}
+
+.p3 {
+  padding: 50px;
+}
+
+.p4 {
+  padding: 20px 50px 100px 30px;
+}
+
+/* Layout */
+.nature {
+  background-color: lightgreen;
+  font-size: 300%;
+  text-align: center;
+  padding: 20px 0px;
+  text-shadow: 2px 2px 5px orange;
+  width: 90%;
+  margin: auto;
+  box-shadow: 5px 5px 5px black;
+  color: darkgreen;
+}
+
+/* Images + Image formatting */
+.img_container {
+  width: 90%;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.image1, .image2, .image3, .image4 {
+  width: 45%;
+  margin: 2%;
+}
+
+.row1, .row2, .row3{
+  margin-top: 2em;
+}
+
+.image1 {
+  border-radius: 20px;
+}
+
+.image2 {
+  border-radius: 50%;
+  /* Border radius of 50% turns the image circular */
+  /* Image needs to be a square with equal dimensions */
+}
+
+.image3 {
+  border: ridge 20px lightgreen;
+  padding: 10px;
+  background-color: lightblue;
+}
+
+/* Floating */
+.image4 {
+  box-shadow: 0px 0px 10px 5px brown;
+}
+
+.pContent {
+  width: 50%;
+  float: right;
+  padding: 1em 2em;
+}
+
+/* Contact Section */
+.contact {
+  border: solid gray;
+  background-color: gray;
+  display: inline-block;
+  width: 100%;
+}
+
+.contact1, .contact2, .contact3 {
+  width: 30%;
+  float: left;
+  margin-left: 3%;
+  padding: 1em 2em;
+}
+
+/* Colors */
+.g1, .g2, .g3, .g4, .g5, .g6 {
+  font-size: 5em;
+  font-family: "Arial Black";
+}
+
+/* Using RGB values */
+.g1, .g4 {
+  color: rgb(66, 133, 244);
+}
+
+.g2, .g6 {
+  color: rgb(234, 67, 53);
+}
+
+.g3 {
+  color: rgb(251, 188, 5);
+}
+
+.g5 {
+  color: rgb(52, 168, 83);
+}
+
+/* Using Hex Codes */
+
+.c1, .c2, .c3, .c4 {
+  font-size: 2em;
+  padding: 1em;
+}
+
+.c1 {
+  background-color: #e3caff;
+}
+
+.c2 {
+  background-color: #b199cc;
+}
+
+.c3 {
+  background-color: #fffdff;
+  border: solid;
+}
+
+.c4 {
+  background-color: #88ffef;
+}
+
+/* Image Positioning */
+.photo_container {
+  border: ridge 20px gray;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.photo_container img {
+  width: 100%
+}
+
+.photo_p1 {
+  text-align: center;
+  font-size: 2em;
+  color: darkgreen;
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  right: 10%;
+  background-color: rgba(234, 67, 53, 0.6);
+  box-shadow: 2px 2px 5px white;
+  /* Fourth value is the opacity (between 0-1)*/
+}
+
+.photo_img2 {
+  width: 100%;
+}
+
+.photo_p2 {
+  position: absolute;
+  background-color: rgba(10,10,10,0.7);
+  top: 20%;
+  bottom: 20%;
+  left: 20%;
+  right: 20%;
+  color: lightgray;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+.link_p2 {
+  display: block;
+  background-color: magenta;
+  margin-top: 1em;
+  padding: 0.2em;
+  border-radius: 12px;
+  text-decoration: none; /* Removes the underline from hyperlink */
+
+}
+
+.link_p2:hover {
+  background-color: lightblue;
+  box-shadow: 0px 0px 5px 2px gray;
+}
+
+/* Filters */
+
+/* Blurred Filter */
+.blur1, .blur2, .blur3, .sepia1, .sepia2, .sepia3, .invert1, .invert2, .invert3 {
+  width: 30%;
+  margin-left: 2%;
+}
+
+.blur1 {
+  /* the higher the pixels, the more blurred*/
+  filter: blur(2px);
+}
+
+.blur2 {
+  filter: blur(10px);
+}
+
+.blur3 {
+  filter: blur(20px);
+}
+
+/* Sepia Filter */
+.sepia1 {
+  filter: sepia(10%);
+}
+
+.sepia2 {
+  filter: sepia(60%);
+}
+
+.sepia3 {
+  filter: sepia(90%);
+}
+
+/* Invert Filter */
+
+.invert1 {
+  filter: invert(10%);
+}
+
+.invert2 {
+  filter: invert(60%);
+}
+
+.invert3 {
+  filter: invert(100%);
+}
+
+/* CSS Animations */
+.animation_container {
+  border: ridge 20px gray;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2em;
+  position: relative;
+  overflow: hidden;
+}
+
+.mountain {
+  width: 100%;
+}
+
+/* Bus Animations */
+.bus {
+  width: 30%;
+  position: absolute;
+  right: -20%;
+  bottom: -10%;
+  animation-name: moveBus;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  /* Amount of times the animation plays */
+  animation-delay: 3s;
+  /* Delay before next cycle of animation plays */
+  animation-fill-mode: forwards;
+  /* Specifies what happens after the animations complete */
+  animation-direction: alternate;
+  /* Going to run the normal animation, then the animation in reverse.  */
+  /* Need at least 2 iterations of the animation to work! */
+  animation-timing-function: ease-in;
+  /* Controls the speed of the animation.  */
+    /* ease starts slowly, then speeds up */
+}
+
+/* In order to apply animations, you need
+an animation name and the animation duration! */
+
+@keyframes moveBus {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(-350%);
+  }
+}
+
+/* Ball Animation */
+.ball {
+  width: 10%;
+  position: absolute;
+  bottom: 0%;
+  left: -10%;
+  animation-name: moveBall;
+  animation-duration: 8s;
+  animation-delay: 10s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveBall {
+  0% {
+    transform: rotate(0deg);
+    left: -10%;
+  }
+  100% {
+    transform: rotate(700deg);
+    left: 100%;
+  }
+}
+
+/* Cloud Animation */
+.cloud1, .cloud2, .cloud3 {
+  position: absolute;
+}
+
+.cloud1 {
+  width: 20%;
+  top: 0%;
+  left: -20%;
+  animation-name: moveCloud;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  /* animation: moveCloud 15s infinite */
+}
+
+.cloud2 {
+  width: 45%;
+  top: -30%;
+  left: -50%;
+  animation: moveCloud 22s infinite;
+}
+
+.cloud3 {
+  width: 50%;
+  left: -10%;
+  top: -20%;
+  animation: moveCloud 30s infinite;
+}
+
+@keyframes moveCloud {
+  0% {
+    opacity: 0.8;
+    transform: translate(0,0);}
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.3;
+    transform: translate(300%, 50%);
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.9;
+    transform: translate(700%, 10%);
+  }
+}
+
+/* Animation to a text */
+.animation_p {
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  text-align: center;
+  background-color: transparent;
+  left: 10%;
+  right: 10%;
+  font-size: 2em;
+  color: white;
+  animation: zoomTxt 8s alternate 2 forwards;
+}
+
+@keyframes zoomTxt {
+  0% {
+    transform: scale(0.5);
+    color: green;
+    text-shadow: 5px 5px 5px black; 
+  }
+  50% {
+    transform: scale(2);
+    color: gray;
+    text-shadow: -5px -5px 5px black;
+  }
+  100% {
+    transform: scale(1);
+    color: red;
+    text-shadow: 5px 5px 2px black;
+  }
+}
+
+/* -------------- ID Selectors -------------- */
+/* Using text-shadow attribute */
+/* First measurement: up(+) and down(-)
+Second measurement: left(-) or right(+)
+Third Measurement: Amount of bluriness
+Fourth: color of the shadow */
+
+#name1 {
+  text-shadow: -10px 0px 2px red;
+}
+
+#name2 {
+  text-shadow: 0px -10px 2px red;
+}
+
+#name3 {
+  text-shadow: -10px 10px 2px red;
+}
+
+#name4 {
+  text-shadow: 10px -10px 2px red;
+}
+
+#name5 {
+  text-shadow: 10px -10px 5px red;
+}
