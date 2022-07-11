@@ -1,0 +1,228 @@
+.photo_container {
+  border: ridge 20px lightblue;
+  width: 80%;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+
+#background_img {
+  width: 100%;
+  animation: flicker 0.4s 2;
+  animation-delay: 4s;
+}
+
+.camera {
+  position: absolute;
+  margin: auto;
+  display: block;
+  bottom: 45%;
+  left: 45%;
+  right: 45%;
+  top: 45%;
+  width: 10em;
+  animation: countdown, scaleElement;
+  animation-duration: 5s, 5s;
+  animation-fill-mode: forwards;
+}
+
+.cue {
+  position: absolute;
+  display: block;
+  margin: 0 45px;
+  bottom: 35%;
+  top: 65%;
+  left: 25%;
+  right: 25%;
+  font-family: "Cooper Black";
+  font-size: 8em;
+  color: #88ffef;
+  animation: countdown, scaleElement;
+  animation-duration: 5s, 5s;
+  animation-fill-mode: forwards;
+}
+
+.heart1, .heart2, .heart3, .heart4, .heart5, .heart6, .heart7,
+.heart8, .heart9, .heart10, .heart11, .heart12 {
+  position: absolute;
+  opacity: 0;
+}
+
+.heart1, .heart2, .heart3, .heart4 {
+  animation: removeElementFaster .14s 36;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+.heart5, .heart6, .heart7, .heart8 {
+  animation: removeElementFast .15s 35;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+.heart9, .heart10, .heart11, .heart12 {
+  animation: removeElementSlower .17s 31;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+.heart1 {
+  top: 0%;
+  left: 0%;
+}
+
+.heart2 {
+  top: 0%;
+  right: 0%;
+}
+
+.heart3 {
+  bottom: 0%;
+  left: 0%;
+}
+
+.heart4 {
+  bottom: 0%;
+  right: 0%;
+}
+
+.heart5 {
+  left: 45%;
+  right: 45%;
+  top: 50%;
+  bottom: 50%;
+  width: 4em;
+}
+
+.heart6 {
+  left: 10%;
+  bottom: 60%;
+  top: 30%;
+  width: 9em;
+}
+
+.heart7 {
+  right: 20%;
+  bottom: 60%;
+  top: 30%;
+  width: 12em;
+}
+
+.heart8 {
+  right: 10%;
+  bottom: 20%;
+  width: 6em;
+}
+
+.heart9 {
+  bottom: 20%;
+  left: 17%;
+  width: 9em;
+}
+
+.heart10 {
+  top: 10%;
+  left: 45%;
+  width: 10em;
+}
+
+.heart11 {
+  bottom: 5%;
+  left: 55%;
+  width: 4em;
+}
+
+.heart12 {
+  left: 34%;
+  top: 12%;
+  width: 2em;
+}
+
+
+@keyframes flicker {
+  0% {
+  }
+  100% {
+    filter: invert(100%);
+  }
+}
+
+@keyframes countdown {
+  0% {
+    color: red;
+    opacity: 1;
+  }
+  50% {
+    color: yellow;
+    opacity: 1;
+  }
+  99% {
+    color: green;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes removeElementFast {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes removeElementFaster {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes removeElementSlower {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes removeElement {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes scaleElement {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(.25);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

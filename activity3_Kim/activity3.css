@@ -455,7 +455,7 @@ an animation name and the animation duration! */
   0% {
     transform: scale(0.5);
     color: green;
-    text-shadow: 5px 5px 5px black; 
+    text-shadow: 5px 5px 5px black;
   }
   50% {
     transform: scale(2);
@@ -468,6 +468,133 @@ an animation name and the animation duration! */
     text-shadow: 5px 5px 2px black;
   }
 }
+
+/* --------Activity 3 Selectors--------*/
+.skyImageContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 2em;
+}
+
+.sky1, .sky2, .sky3 {
+  width: 100%;
+}
+
+.skyImage {
+  /* margin: 0 22px 0 22px; */
+  margin: auto 30px;
+  display: inline-block;
+  width: 30%;
+  position: relative;
+}
+
+
+/* Airplane in the Sky Image */
+.sky1 {
+  filter: invert(100%);
+}
+
+.planeText {
+  position: absolute;
+  width: 80%;
+  bottom: 6%;
+  left: 9%;
+  border: ridge white;
+  background-color: rgba(10,10,10,0.5);
+  color: white;
+  padding: 2% 2%;
+  font-size: 1.2em;
+  margin: auto;
+}
+
+.planeTitle, .orangeSkyTitle{
+  font-size: 2em;
+}
+
+/* Orange Sky Image */
+
+.sky2 {
+  filter: blur(4px);
+}
+
+.orangeSkyText {
+  position: absolute;
+  display: block;
+  width: 60%;
+  height: 30%;
+  top: 30%;
+  bottom: 30%;
+  left: 20%;
+  right: 20%;
+  background-color:rgba(255,255,255,0.3);
+  font-size: 1.2em;
+  padding: 2% 2% 10% 2%;
+  color: white;
+  text-align: center;
+  box-shadow: 5px 5px 7px 1px white;
+  margin: auto;
+}
+
+.googleTravelLink {
+  background-color: #E8AA42;
+  border-radius: 12px;
+  color: white;
+  padding: 0.5em ;
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+  text-decoration: none;
+}
+
+.googleTravelLink:hover {
+  background-color: orange;
+  box-shadow: 0px 0px 5px 2px yellow;
+}
+
+/* Moon Image */
+
+.sky3 {
+  filter: sepia(60%);
+}
+
+.moonTitle {
+  position: absolute;
+  font-size: 3em;
+  color: #7A86B6;
+  bottom: 42%;
+  right: 40%;
+  opacity: 60%;
+  margin: auto;
+}
+
+.moonQuote1, .moonQuote2, .moonQuote3 {
+  background-color: transparent;
+  position: absolute;
+  color: #7A86B6;
+  font-size: 1.3em;
+  margin: auto;
+}
+
+.moonQuote1 {
+  top: 3%;
+  right: 5%;
+  width: 60%;
+}
+
+.moonQuote2 {
+  bottom: 60%;
+  left: 5%;
+  width: 40%;
+}
+
+.moonQuote3 {
+  width: 80%;
+  bottom: 4%;
+  right: 10%;
+}
+
 
 /* -------------- ID Selectors -------------- */
 /* Using text-shadow attribute */
