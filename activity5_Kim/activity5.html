@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Activity 5 - Eunsu (David) Kim</title>
+  </head>
+  <body>
+    <h1>Eunsu (David) Kim: Activity 5</h1>
+    <script type="text/javascript">
+      // Numerical Values
+      let number1 = 56;
+      let number2 = -80;
+      let number3 = 3/4;
+
+      // String Values - Single of double quotation marks; Doesn't matter
+      let color = "beige";
+      let msg = "Hello World";
+
+      // Quotation Marks
+      let string2 = 'I want to keep the "quotation" mark';
+      let string3 = "I want to keep the \"quotation\"";
+
+      // Empty & Null Value
+        // Empty is not empty; the value is empty.
+        // Null is no-value.
+
+      // Boolean values - True(1) or False(0)
+      let boolean1 = true;
+      let boolean0 = false;
+        // Adding a boolean value and a nummerical value will result in
+        // Addition of the number and the boolean value (1 or 0).
+
+        // Adding a boolean value and a string will concatenate the
+        // word "true" or "false" to the string.
+
+      // Undefined variables
+        // When you do not know what type of data is going to be stored.
+
+      let undefined1;
+
+      // Console Logging - Checking the flow of your code
+      console.log(number2);
+      console.log("Good evening!");
+      console.log("The color is: " + color);
+
+      // Template Literals using back-tick; Similar to f-string in Python
+      console.log(`The color is: ${color}`);
+
+      // Prompt Method - Displays a prompt window
+
+       /* Need to assign to variable to save response typed in prompt.
+          Response collected from prompt will ALWAYS be a string.
+          First paramter - Title of Text Box; Second Parameter - Default value
+           Usually do not use the second paramter of prompt. */
+
+      // let name = prompt("Enter a name: ", "WHERE AM I");
+
+      // let num1 = prompt("Enter number 1: ");
+      // num1 = parseInt(num1);
+      // let num2 = parseInt(prompt("Enter number 2: "));
+      // summation = num1 + num2;
+
+        // Changing datatype of prompt to integer:
+          // Use parseInt()
+
+      // // Strings
+      // let name = "Will Smith";
+
+        // Methods: object.methodName();
+          // .toUpperCase() - Changes all characters to uppercase
+          // .toLowerCase() - Changes all characters to lowercase
+          // .search() - returns the index of the first instance.
+          // .trim() - removes whitespace from a string.
+          // .replace() - replaces character with another character.
+          // .slice() - extracts a section of a string and returns it as a new string without modifying.
+
+        // Properties: object.propertyName;
+          // Informationa about the object.
+          // .length - finds the length of the string.
+
+      let nameLength = name.length; // Example of a property (.length)
+      let upperName = name.toUpperCase(); // Example of a method
+      let lowerName = name.toLowerCase(); // Example of a method
+      let newName = name.slice(2, 8);
+
+      // Arrays
+
+      // let everything = [-23, 'color', true, "Peter Pan", 88];
+      // let copyArray = everything;
+      // These two arrays are linked.
+      // Changes to copyArray apply to everyting, and vice versa.
+
+      // To create a non-linked copy, use .slice().
+      // let sliceArray = everything.slice();
+
+      // Direct Methods - Changes the original array.
+
+      console.log(" ========== Activity 5.1) Variables and Prompt Method ========== ");
+
+      let userName = prompt("Enter your name: ");
+      let userLNum = prompt("Enter your lucky number: ");
+
+      console.log(" a) Welcome to the program, " + userName + ". Your lucky number is " + userLNum + ".");
+      console.log(` b) Good Morning, ${userName}. You entered number: ${userLNum}.`);
+
+      console.log(" ========== Activity 5.2) Strings and String Method ========== ");
+
+      let userWord = prompt("Enter a word: ");
+
+      console.log(" a) The second letter of the word is: " + userWord[1] + ".");
+      console.log(" b) The length of word " + userWord + " is " + userWord.length + ".");
+      console.log(" c) The word " + userWord + " in uppercase is: " + userWord.toUpperCase());
+      console.log(" d) The last two characters of the word " + userWord + " is " + userWord.slice(userWord.length - 2, userWord.length) + ".");
+
+      console.log(" ========== Activity 5.3) Arrays and Array Method ========== ");
+
+      let mixedArray = [45, "Hello", true, 'D', -23, false];
+
+      console.log(" a) Mixed array with initial values: " + mixedArray);
+
+      let userAnimal = prompt("Enter the name of any animal: ");
+      mixedArray.push(userAnimal);
+      console.log(" b) Mixed array with a new animal added to the end: " + mixedArray);
+
+      let userNegative = prompt("Enter any NEGATIVE number: ");
+      mixedArray.unshift(userNegative);
+      console.log(" c) Mixed array with a new NEGATIVE NUMBER added to the front, beginning, of the array: " + mixedArray);
+
+      let copyArray = mixedArray.slice();
+      console.log(" d) Mixed array: " + mixedArray + " and reverse of copy array: " + copyArray.reverse());
+
+    </script>
+  </body>
+</html>
