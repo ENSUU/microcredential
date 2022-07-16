@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Eunsu (David) Kim: Activity 7</title>
+  </head>
+  <body>
+    <h1>Eunsu (David) Kim: Activity 7 (Loops)</h1>
+    <script type="text/javascript">
+    /*
+      // Example 1: Using a for loop to print an increasing counter from 0 to 4
+
+      console.log('The current i is 0')
+      console.log('The current i is 1')
+      console.log('The current i is 2')
+      console.log('The current i is 3')
+      console.log('The current i is 4')
+
+
+      for (let counter = 0; counter <= 10; counter += 5) {
+        console.log(`The current counter value is ${counter}`)
+      }
+
+      // Example 2: Using a for loop to print even numbers between 0 and 100 exclusive
+
+      let num = parseInt(prompt("Enter a number between 0 and 90: "))
+
+      for (num; num < 100; num++) {
+        if (num % 2 === 0) {
+          console.log(num)
+        }
+      }
+
+
+    // Example 3: for Loop - Decrementing
+
+    for (let num = 100; num >= 0; num -= 10) {
+      console.log(num)
+    }
+
+
+    // Example 4: Use a for loop to display each item in array cars[]
+
+    let cars = ['Mazda', 'Tesla', 'Dodge', 'BMW', 'Porshe']
+
+    for (let i = 0; i < cars.length; i++) {
+      console.log(`Car ${i + 1} = ${cars[i]}`)
+    }
+
+
+    // Example 5: Use for...of loop to print each item in array
+
+    let cars = ['Mazda', 'Tesla', 'Dodge', 'BMW', 'Porshe']
+
+    for (let eachCar of cars) {
+      console.log(eachCar)
+    }
+
+
+    // Example 6: Use a for loop to print each character in a string
+
+    let myString = "David"
+
+    for (let eachLetter of myString) {
+      console.log(eachLetter)
+    }
+
+
+    // Example 7: Nest Statements
+
+    let foods = ['salad', 'pizza', 'tofu', 'cheeseburger']
+
+    for (let i = 0; i < foods.length; i++) {
+      if ((i + 1) % 2 === 0) {
+        let x = foods[i].toUpperCase();
+        console.log(`I want some ${x}`)
+      }
+      else {
+        console.log(`I want some ${foods[i]}`)
+      }
+    }
+
+
+    // Example 8: Nested for Loops
+
+    for (let outerCounter = 1; outerCounter <= 5; outerCounter++) {
+      console.log(`OUTER LOOP COUNT \t\t\t ${outerCounter}`)
+      for (let innerCounter = 30; innerCounter >= 0; innerCounter -= 10) {
+        console.log(`Inner Counter = ${innerCounter}`)
+      }
+    }
+
+
+    // Example 9: while Loop
+
+    let num = 0
+
+    while (num <= 4) {
+      console.log(num)
+      num++
+    }
+
+
+    // Example 10: Guessing a secret number using while loop
+
+    const secretNumber = 4
+    let userNum = parseInt(prompt("Guess a number between 0 and 10: "))
+
+    while (userNum !== secretNumber) {
+      userNum = parseInt(prompt("Wrong. Guess another number between 0 and 10: "))
+    }
+
+
+    // Example 11: break Keyword
+
+    for (let counter = 20; counter >= 0; counter--) {
+      console.log(`Counter = ${counter}`)
+      if (counter === 9) {
+        break
+      }
+    }
+
+
+    // Example 12: continue Keyword
+
+    let userPick = parseInt(prompt("Enter a number between 0 and 10: "))
+
+    for (counter = 0; counter <= 10; counter++) {
+      if (counter === userPick) {
+        continue
+      }
+      console.log(`Counter = ${counter}`)
+    }
+    */
+    console.log("=== Activity 7 - JavaScript Fundamentals: Loops ===")
+
+    console.log("=== 1) while Loop nesting with if - else if - else statement ===")
+
+    userChoice = prompt("Enter a number between 1 and 10: ")
+
+    while (userChoice) {
+      userChoiceCheck = isNaN(userChoice)
+
+      if (userChoiceCheck) {
+        userChoice = prompt(`${userChoice} is not a number. Enter a number again: `)
+      }
+      else if (userChoice < 1) {
+        userChoice = prompt(`${userChoice} is less than 1. Enter a number greater than 1: `)
+      }
+      else if (userChoice > 10) {
+        userChoice = prompt(`${userChoice} is greater than 10. Enter a number less than 10: `)
+      }
+      else {
+        console.log(`You entered ${userChoice}.`)
+        break
+      }
+    }
+
+    console.log("=== 2) for Loop ===")
+
+    userChoice = parseInt(userChoice)
+
+    for (userChoice; userChoice <= 20; userChoice++) {
+      console.log(userChoice)
+    }
+
+    </script>
+  </body>
+</html>
