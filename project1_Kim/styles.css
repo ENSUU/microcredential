@@ -1,0 +1,456 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+hr {
+  border: dotted;
+  color: white;
+  border-width: 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 20px auto 50px auto;
+  display: block;
+}
+
+/* --------------- Class Selectors --------------- */
+
+/* --------------- Navigation Bar --------------- */
+
+.navigationBar {
+  width: 100%;
+  background-color: #A10035;
+}
+
+.indonesiaFlag {
+  border-radius: 50%;
+  border: solid white;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  /* display: inline-block; */
+}
+
+.navigationtxt {
+  float: left;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-family: "Monotype Corsiva";
+  color: white;
+  /* #F0EBE3 */
+  font-size: 40px;
+  text-shadow: 0px 0px 3px lightgray;
+}
+
+.navTitle {
+  width: auto;
+  display: inline-block;
+  text-align: left;
+}
+
+.navlinks {
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+  width: auto;
+}
+
+.navlinkbox {
+  display: inline-block;
+  float: right;
+  width: auto;
+  margin: 38px;
+}
+
+.redirect1, .redirect2, .redirect3, .redirect4 {
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+  /* #F0EBE3 */
+  font-family: "Monotype Corsiva";
+  font-size: 24px;
+}
+
+.redirect1:hover, .redirect2:hover, .redirect3:hover, .redirect4:hover {
+  text-shadow: 1px 1px 10px black;
+}
+
+/* --------------- Top Section --------------- */
+.top {
+  width: 100%;
+  background-color: #E4DCCF;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bali1 {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  display: block;
+}
+
+.sunImage {
+  position: absolute;
+  left: -10%;
+  top: 40%;
+  width: 10%;
+  z-index: 1;
+  margin: auto;
+  animation: moveSun 5s forwards;
+}
+
+@keyframes moveSun {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(950%);
+  }
+}
+
+.topTitle {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  left: 0;
+  right: 0;
+  top: 275px;
+  text-align: center;
+}
+
+#title {
+  font-family: "Monotype Corsiva";
+  font-size: 10em;
+  color: #F9F9C5;
+  margin: auto;
+  animation: zoomTitle 10s infinite;
+}
+
+@keyframes zoomTitle {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.introtext {
+  position: absolute;
+  color: #A10035;
+  /* #FFC4C4 */
+  font-size: 3em;
+  margin: auto auto;
+  left: 0;
+  right: 0;
+  bottom: 6em;
+  min-width: 60%;
+  font-family: "Monotype Corsiva";
+  /* "Arial Black" */
+  overflow: hidden;
+}
+
+/* --------------- Middle Section  --------------- */
+.middle {
+  /* #E4DCCF */
+  /* #A10035 */
+  width: 100%;
+  text-align: center;
+}
+
+.middle1, .middle2, .middle3 {
+  margin: auto;
+}
+
+.middle1 {
+  background-color: #A10035;
+}
+
+.middle2 {
+  background-color: rgb(242, 190, 0);
+}
+
+.middle3 {
+  background-color: rgb(94, 93, 45);
+}
+
+.middleTitle {
+  margin: 0px;
+  color: #FFFFFF;
+  /* #7D9D9C */
+  font-size: 4em;
+  font-family: "Monotype Corsiva";
+  text-align: center;
+  padding-top: 25px;
+}
+
+.middleImageContainer {
+  width: 35%;
+  display: inline-block;
+  margin: 4% 6%;
+}
+.aboutPicture, .aboutPicture2, .aboutPicture3 {
+  width: 100%;
+  margin: 2% 5%;
+  border: ridge 15px white;
+}
+
+.aboutPicture {
+  filter: blur(2px);
+}
+
+.aboutPicture2 {
+  filter: invert(100%);
+}
+
+.aboutPicture3 {
+  filter: sepia(1);
+}
+
+.aboutPicture:hover {
+  filter: blur(0px);
+}
+
+.aboutPicture2:hover {
+  filter: invert(0%);
+}
+
+.aboutPicture3:hover {
+  filter: sepia(0%);
+}
+
+.aboutText1, .aboutText2, .aboutText3{
+  display: inline-block;
+  color: white;
+  font-family: "Monotype Corsiva";
+  font-size: 2.5vw;
+  width: 41%;
+}
+
+.aboutLink {
+  text-decoration: none;
+}
+
+.aboutText1, .aboutText3{
+  float: right;
+}
+
+.aboutText1 {
+  margin: 3% 6%;
+}
+
+.aboutText2 {
+  float: left;
+  margin: 4% 6%;
+}
+
+.aboutText3 {
+  margin: 8% 6%;
+}
+
+.activitiesButton1, .activitiesButton2 {
+  display: block;
+  background-color: white;
+  border-radius: 5px;
+  margin: 8% 0px;
+  width: auto;
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+.activitiesButton1 {
+  color: rgb(242, 190, 0);
+}
+
+.activitiesButton2 {
+  color: rgb(94, 93, 45);
+}
+
+.activitiesButton1:hover , .activitiesButton2:hover {
+  box-shadow: 0px 0px 5px 5px gray;
+}
+
+
+/* --------------- Bottom Section --------------- */
+.bottom {
+  background-color: #576F72;
+  width: 100%;
+}
+
+.projectInformation {
+  display: inline-block;
+  width: 40%;
+  color: white;
+  padding: 3%;
+  font-size: 20px;
+  margin: 0 5%;
+}
+
+.contactInformation {
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  float: right;
+  width: 33%;
+  margin: 3% 5%;
+  padding: auto;
+}
+
+.contactLogo {
+  width: 10%;
+  margin-left: 5%;
+}
+
+.contactLogo:hover {
+  opacity: 50%;
+}
+
+/* --------------- Footer Section --------------- */
+
+
+/* --------------- Indonesia Activities Page --------------- */
+
+.komodoActivity {
+  background-color: #73A9AD;
+  padding-bottom: 50px;
+}
+
+.goToKomodoPlug {
+  text-decoration: none;
+}
+
+
+.komodoImage {
+  width: 25%;
+  height: 332.25px;
+  margin: 1%;
+  border-radius: 5px;
+  border: ridge  10px skyblue;
+  box-shadow: 0px 0px 5px black;
+}
+
+.komodoImageCase {
+  margin-top: 3%;
+  width: 100%;
+  text-align: center;
+}
+
+.komodoSummary {
+  color: white;
+  font-size: 2vw;
+  width: 90%;
+  margin: 3% 5%;
+  text-align: center;
+}
+
+.komodoDefiniton {
+  font-size: 24px;
+  text-align: left;
+}
+
+.baliActivity {
+  background-color: #90C8AC;
+  padding-bottom: 5%;
+}
+
+.monkeyImage {
+  width: 100%;
+  margin: 2% 5%;
+  border: ridge 15px white;
+  display: inline-block;
+}
+
+.mSummary {
+  float: right;
+  display: inline-block;
+  font-size: 2vw;
+  width: 41%;
+  color: white;
+  margin: 8% 6%;
+  text-align: center;
+}
+
+.mActivityGuidelines {
+  text-align: center;
+  border: solid 2px white;
+  color: white;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.mActivityTitle {
+  background-color: #94B49F;
+  /* border: solid 2px white; */
+  font-size: 3vw;
+  padding: 10px 0;
+}
+
+.mRule {
+  background-color: #CEE5D0;
+  font-weight: bold;
+  width: 45%;
+  padding: 2%;
+}
+
+.mRow {
+  font-size: 2vw;
+  padding: 2px;
+  margin: auto;
+  background-color: #54BAB9;
+}
+
+.secondaryNavBar_a, .secondaryNavBar_l {
+  padding: 3.5em 0px;
+}
+
+.secondaryNavBar_a {
+  background-color: #C4DFAA;
+}
+
+/* --------------- Indonesia Locations Page --------------- */
+
+.borobudurTemple {
+  background-color: #6E85B7;
+}
+
+.borobudurTitle {
+  text-align: center;
+  font-size: 3vw;
+  font-family: "Monotype Corsiva";
+}
+
+.borobudurImageCase {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.templeImage {
+  width: 35%;
+  border-radius: 5px;
+  margin: 2%;
+  border: ridge 10px white;
+  box-shadow: 0px 0px 5px black;
+}
+
+.borobudurSummary {
+  color: white;
+  font-size: 1.5vw;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2% 5% 5%;
+  background-color: #9eb5e9;
+}
+
+.secondaryNavBar_l {
+  background-color: #d9d8ff;
+}
