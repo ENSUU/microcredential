@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Eunsu (David) Kim: Activity 9</title>
+</head>
+
+<body>
+  <h1>Eunsu (David) Kim: Activity 9</h1>
+  <script type="text/javascript">
+
+    // Example 1:
+    let msg = 'This is an outside message.'
+
+    function displayMsg() {
+      msg = "Hello World! I'm inside of a function. "
+      console.log(msg)
+    }
+    console.log(msg)
+
+    // Example 1.b:
+    let msg1 = 'This is a global variable.'
+
+    function displayMsg1() {
+      console.log(`Function message ${msg1}`)
+    }
+    console.log(`After function ${msg1}`)
+
+    // Example 2:
+    // Using keyword var does not respect scoping. Changes in a function will update a global variable.
+    // Using keyword let respects scoping. Changes made in the function stay within the function.
+
+    const fullMoon = true
+    let species = 'Human' // Global variable
+
+    if (fullMoon) {
+      let species = 'Wereworlf' // Local variable
+      console.log(`Lupin is currently a ${species}`)
+    }
+    console.log(`Lupin is outside of the if-statement: ${species}`)
+
+    // Example 3:
+    const sum = function(num1, num2) {
+      return num1 + num2
+    }
+
+    // Example 3.b:
+    console.log('Example 3.b) Return the square of a number')
+    let square = function(num) {
+      return Math.pow(num,2)
+    }
+
+    // Example 4:
+    function callTwice(dice) {
+      console.log(dice())
+      console.log(dice())
+    }
+
+    function rollDice() {
+      const roll = Math.floor(Math.random()*6) + 1
+      return roll
+    }
+
+    callTwice(rollDice)
+
+    // Example 5: Returning function
+    function makeBetweenFunc(min, max) {
+      return function (num) {
+        return num >= min && num <= max
+      }
+    }
+
+    // Example 6: Create methods for object - myMath
+    const myMath = {
+      // let square = function (num) {return num * num}
+      square: function(num) {return num * num},
+      double: function(num) {return num * 2}
+    }
+    // Newest version of JavaScript doe not require you to write the word 'function'
+    // Ex: square (num) {return num * num} works as well.
+
+    //Example 7: Creating methods for object - squareFig
+
+    const squareFig = {
+      area (side) {return side * side},
+      perimeter (side) {return side * 4}
+    }
+
+    // Example 8: Using 'this' keyword in an object.
+    // this => This object.
+
+    const cat = {
+      // let name = 'Mickey'
+      name: 'Mickey', // Object property.
+      color: 'White with black spots.', // Object property.
+      breed: 'Unknown', // Object property.
+      meow() {console.log(`${this.name} - MEOW MEOW MEOW`)}
+    }
+
+    // Example 9: Define an object called 'hen' with two properties and a method.
+
+    const hen = {
+      name: 'Helen',
+      eggCount: 0,
+      layAnEgg() {
+        this.eggCount++
+        return `EGG! Egg Count: ${this.eggCount}`}
+    }
+
+    // Try and Catch - Exception Handling
+
+    let hello = 'Hey There!'
+
+    try {
+      hello.toUpperCase()
+    }
+    catch {
+      console.log("ERROR!!")
+    }
+    console.log('After Try and Catch!')
+
+    // Example 10:
+    console.log('Example 10: Try and Catch')
+
+    function yell (message) {
+      try {
+        console.log(message.toUpperCase().repeat(3))
+      }
+      catch {
+        console.log('Please pass in a string!')
+      }
+    }
+
+    // Example 11: default parameters in a Function
+    console.log('Example 11: default parameters')
+    function rolldice(numSides = 6) {
+      return Math.floor(Math.random() * numSides) + 1
+    }
+    // When parameter values are not specified, the default value will be used.
+
+    // Example 12: spread '...'
+    console.log('Example 12: Spread!')
+
+    // Math.max() finds the greatest value.
+    // Math.min() finds the lowest value.
+    // These methods DO NOT work on arrays. Need to use spread.
+
+    let nums = [-9, 20, -13, 8, 6]
+    let greatest = Math.max(6, -1, 7, -10)
+    let lowest = Math.min(6, -1, 7, -10)
+
+    // Math.min(nums) -> returns NaN
+    // Math.min(...nums) -> returns the minimum value in an array
+
+    let animal = ['cat', 'dog', 'fish']
+    let copyAnimal = [...animal] // Copies an array. Changes to this array are not done to the original array.
+    // Can also be done using strings. Splits each character in a string into an arrayy element.
+
+  </script>
+</body>
+
+</html>
