@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Helps preserve the size of elements depending on the device's viewport size.  -->
+  <title>Activity 12</title>
+  <link rel="stylesheet" href="activity12.css">
+</head>
+
+<body>
+  <!-- Cards Activity: Responsive Website -->
+  <h1 class="mainTitle">Four Seasons</h1>
+  <nav class="nav">
+    <a href="https://www1.nyc.gov/" target="_blank">NYC</a>
+    <a href="https://www.cuny.edu/" target="_blank">CUNY</a>
+    <a href="https://www.qcc.cuny.edu/" target="_blank">QCC</a>
+  </nav>
+  <section class="cardContainer">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="images/space1.jpg" alt="Image of Space">
+      <h3>Spring</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacinia quis vel eros donec ac odio tempor. Mauris cursus mattis molestie a. A diam maecenas sed enim ut sem. Ultrices
+        tincidunt arcu non sodales. Nec ullamcorper sit amet risus nullam eget felis eget nunc.
+      </p>
+      <!-- Open Modal Window -->
+      <a id="openItem1">Add to Cart</a>
+    </div>
+
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="images/space2.jpg" alt="Image of Space">
+      <h3>Summer</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacinia quis vel eros donec ac odio tempor. Mauris cursus mattis molestie a. A diam maecenas sed enim ut sem. Ultrices
+        tincidunt arcu non sodales. Nec ullamcorper sit amet risus nullam eget felis eget nunc.
+      </p>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="images/space3.jpg" alt="Image of Space">
+      <h3>Fall</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacinia quis vel eros donec ac odio tempor. Mauris cursus mattis molestie a. A diam maecenas sed enim ut sem. Ultrices
+        tincidunt arcu non sodales. Nec ullamcorper sit amet risus nullam eget felis eget nunc.
+      </p>
+    </div>
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="images/space4.jpg" alt="Image of Space">
+      <h3>Winter</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacinia quis vel eros donec ac odio tempor. Mauris cursus mattis molestie a. A diam maecenas sed enim ut sem. Ultrices
+        tincidunt arcu non sodales. Nec ullamcorper sit amet risus nullam eget felis eget nunc.
+      </p>
+    </div>
+  </section>
+
+  <!-- Forms -->
+  <hr>
+
+  <input class="input2" type="text" name="username" value="" maxlength="20" placeholder="Up to 20 characters!">
+
+  <br>
+
+  <input id="myPassword" type="text" name="password" value="" placeholder="Up to 8 characters!" maxlength="8">
+  <a id="viewPassword">View Password</a>
+
+  <!-- Example 4 -->
+  <h3>Select your favorite animal:</h3>
+  <!-- Different ways to use labels: -->
+  <!-- Separately -->
+  <label for="cat">Cats</label>
+  <input type="checkbox" name="animals" value="Cat" id="cat">
+  <br>
+  <!-- Combined -->
+  <label>Dog<input type="checkbox" name="animals" value="Dog"></label>
+
+  <!-- Example 5 -->
+  <h3>Select a gender:</h3>
+  <label>Female<input type="radio" name="gender" value="female"></label>
+  <label>Male<input type="radio" name="gender" value="male"></label>
+  <label>Others<input type="radio" name="gender" value="others"></label>
+
+  <br>
+  <!-- Example 6: Search Forms -->
+  <!-- Note, the names for searching on different websites are different -->
+
+  <!-- Google Search Form -->
+  <form class="" action="https://www.google.com/search">
+    <input type="search" name="q" placeholder="Type your search for Google">
+    <button>Search on Google</button>
+  </form>
+
+  <!-- YouTube Search Form -->
+  <form class="" action="https://www.youtube.com/results">
+    <input type="search" name="search_query" placeholder="Type your search for Google">
+    <button>Search on YouTube</button>
+  </form>
+
+  <!-- Useful for scheduling appointments -->
+  <input id="date" type="date" name="appointment" value="">
+
+  <!-- Slideshow -->
+  <h1>Manual Slideshow</h1>
+  <section class="container_slideshow">
+    <div class="slide">
+      <img src="images/space1.jpg">
+      <p>Space 1</p>
+    </div>
+    <div class="slide">
+      <img src="images/space2.jpg">
+      <p>Space 2</p>
+    </div>
+    <div class="slide">
+      <img src="images/space3.jpg">
+      <p>Space 3</p>
+    </div>
+    <div class="slide">
+      <img src="images/space4.jpg">
+      <p>Space 4</p>
+    </div>
+    <a class="prev" href="#">&#10094;</a>
+    <a class="next" href="#">&#10095;</a>
+  </section>
+
+  <h1>Automatic Slideshow</h1>
+
+  <section class="container_slideshow">
+    <div class="slideAuto">
+      <img src="images/space1.jpg">
+      <p>Space 1</p>
+    </div>
+    <div class="slideAuto">
+      <img src="images/space2.jpg">
+      <p>Space 2</p>
+    </div>
+    <div class="slideAuto">
+      <img src="images/space3.jpg">
+      <p>Space 3</p>
+    </div>
+    <div class="slideAuto">
+      <img src="images/space4.jpg">
+      <p>Space 4</p>
+    </div>
+  </section>
+
+  <h1>Eunsu (David) Kim</h1>
+
+  <!-- Practice -->
+  <section class="container">
+    <header class="title">
+      Title
+    </header>
+    <main class="intro">
+      Introduction
+    </main>
+    <footer class="footer">
+      Contact Us
+    </footer>
+  </section>
+
+
+  <!-- Modal Window for Item 1 -->
+  <form id="myForm" action="sentForm.html" method="post">
+    <section class="modalWindow">
+      <div class="modalBody">
+        <header id="closeModal" class="modalHeader">
+          <a href="#">X</a>
+        </header>
+        <main class="modalInfo">
+          Information of the Product.
+          <br><br>
+          <label for="firstN">First Name: <input id="firstN" type="text" name="firstName"> </label>
+          <label for="lastN">Last Name: <input id="lastN" type="text" name="lastName"> </label>
+        </main>
+        <footer class="modalFooter">
+          <input class="input1" type="submit" name="SUBMIT">
+        </footer>
+      </div>
+    </section>
+  </form>
+
+  <script src="activity12.js" type="text/javascript"></script>
+</body>
+
+</html>

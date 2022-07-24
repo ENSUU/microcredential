@@ -1,0 +1,253 @@
+ /* CSS Properties to improve responsiveness of webpages */
+ * {
+   box-sizing: border-box;
+ }
+
+ html {
+   scroll-behavior: smooth;
+ }
+
+ /* Forms */
+ .input1 {
+   background-color: darkgray;
+   border-radius: 12px;
+   padding: 0.2em 1em;
+ }
+
+ .input1:hover {
+   background-color: lightgray;
+   color: red;
+   box-shadow: 0px 0px 2px 2px gray;
+ }
+
+ .input1, .input2 {
+   display: block;
+   margin-bottom: 2em;
+ }
+
+ /* Slideshow */
+ .container_slideshow {
+   width: 80%;
+   margin: 2em auto;
+   position: relative;
+ }
+
+ .slide, .slideAuto {
+   width: 100%;
+   display: none;
+   animation: slideAnimation 1s;
+ }
+
+ @keyframes slideAnimation {
+   0% {
+     transform: translateX(50px);
+   }
+
+   100% {
+     transform: translateX(0px);
+   }
+ }
+
+ .slide img, .slideAuto img {
+   width: 100%;
+   vertical-align: middle;
+ }
+
+ .slide p, .slideAuto p {
+   position: absolute;
+   left: 10%;
+   right: 10%;
+   bottom: -10%;
+   text-align: center;
+   font-size: 5em;
+   color: white;
+ }
+
+ .prev, .next {
+   position: absolute;
+   top: 40%;
+   font-size: 3em;
+   color: gray;
+   display: block;
+   padding: 0.2em 0.5em;
+ }
+
+ .prev {
+   left: 2%;
+ }
+
+ .next {
+   right: 2%;
+ }
+
+ .prev:hover, .next:hover {
+   background-color: rgba(220, 220, 220, 0.8);
+   color: black;
+ }
+
+ /* Practice */
+ .container {
+   border: solid gray;
+   width: 100%;
+   height: 200px;
+   box-shadow: 1px 1px 5px gray;
+   margin-bottom: 3em;
+   display: inline-block;
+ }
+
+ .title {
+   width: 100%;
+   height: 20%;
+ }
+
+ .intro {
+   width: 65%;
+   height: 80%;
+   margin-right: 2%;
+   float: left;
+ }
+
+ .footer {
+   width: 33%;
+   height: 80%;
+   float: left;
+ }
+
+ /* Cards Activity and Modal Window */
+ /* Modal Window */
+ #openItem1 {
+   display: block;
+   padding: 0.5em;
+   color: black;
+   background-color: orange;
+   text-align: center;
+ }
+
+ #openItem1:hover {
+   background-color: darkgray;
+   color: orange;
+ }
+
+ .modalWindow {
+   background-color: rgba(50, 50, 50, 0.6);
+   position: fixed;
+   top: 0%;
+   bottom: 0%;
+   left: 0%;
+   right: 0%;
+   display: none;
+ }
+
+ .modalBody {
+   width: 60%;
+   margin: 5% auto;
+   background-color: white;
+   height: 500px;
+ }
+
+ .modalHeader {
+   height: 10%;
+   background-color: orange;
+   padding: 0.5em;
+ }
+
+ .modalInfo {
+   height: 70%;
+   padding: 0.5em;
+ }
+
+ .modalFooter {
+   height: 20%;
+   background-color: orange;
+   padding: 0.5em;
+ }
+
+ .mainTitle {
+   text-align: center;
+   color: orange;
+   padding: 2em;
+ }
+
+ .cardContainer {
+   width: 100%;
+   display: inline-block;
+   margin-top: 2em;
+   margin-bottom: 5em;
+ }
+
+ .nav {
+   width: 100%;
+   background-color: orange;
+ }
+
+ .nav a {
+   width: 32.5%;
+   display: inline-block;
+   padding: 1em;
+   text-align: center;
+   text-decoration: none;
+   color: darkblue;
+ }
+
+ .nav a:hover {
+   background-color: blue;
+   color: orange;
+ }
+
+ .card {
+   box-shadow: 2px 2px 3px gray;
+   width: 24%;
+   margin-left: 1%;
+   height: 100%;
+   float: left;
+ }
+
+ .card img {
+   width: 100%;
+   height: 45%;
+ }
+
+ .card h3 {
+   text-align: center;
+   padding: 0.5em;
+   color: orange;
+ }
+
+ .card p {
+   padding: 0.5em;
+ }
+
+ @media only screen and (max-width: 800px) {
+   body {
+     background-color: pink;
+   }
+
+   .title {
+     height: 10%;
+     font-size: 3em;
+     overflow: hidden;
+     color: purple;
+   }
+
+   .intro {
+     height: 50%;
+     width: 100%;
+   }
+
+   .card {
+     width: 47.5%;
+     margin-top: 2em;
+     margin-left: 2%;
+   }
+
+   .nav a {
+     width: 32%;
+   }
+ }
+
+ @media only screen and (max-width: 600px) {
+   .nav a, .card {
+     width: 80%;
+     margin-left: 10%;
+   }
+ }
