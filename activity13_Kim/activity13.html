@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Can also change the CSS from Bootstrap yourself -->
+    <style media="screen">
+      kbd {
+        color: red;
+      }
+
+      .rounded, .rounded-circle, .img-thumbnail {
+        width: 20%;
+        margin: 3em;
+      }
+
+      figure img {
+        width: 80%;
+      }
+
+      .list-group-item {
+        width: 50%;
+      }
+
+      .dropdown {
+        margin-top: 5em;
+      }
+
+      .title {
+        text-align: center;
+        padding: 0.5em;
+        font-size: 3em;
+      }
+
+    </style>
+
+    <title>Eunsu (David) Kim - Activity 13: Bootstrap</title>
+  </head>
+  <body>
+    <!-- Responsive Webpage using Grid System -->
+    <header class="title bg-warning">
+      Title of Website:
+    </header>
+    <section>
+      <main class="container-fluid">
+        <section class="row">
+          <div class="col-lg-2 col-md-1 col-sm-4" style="border: solid brown; height: 300px">
+            <ul class="list-group" style="margin-top: 5em;">
+              <li><a href="#" class="list-group-item">Home</a></li>
+              <li><a href="#list" class="list-group-item">List</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-8 col-md-9 col-sm-8" style="border: solid brown; height: auto;">
+            <img src="images/photo1.jpg" style="width: 100%;">
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-12" style="border: solid brown; height: 300px">
+
+          </div>
+        </section>
+        <section class="row">
+          <div class="col-lg-8 col-md-6" style="border: solid green; height: 100px;">
+
+          </div>
+          <div class="col-lg-4 col-md-6" style="border: solid green; height: 100px;">
+
+          </div>
+        </section>
+      </main>
+    </section>
+
+
+
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown dropup">
+      <button type="button" class="dropdown-toggle btn btn-warning" data-bs-toggle="dropdown">CUNY Community College</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="https://www.qcc.cuny.edu/" target="_blank">Queensborough Community College</a></li>
+        <li><a class="dropdown-item" href="https://www.laguardia.edu/" target="_blank">LaGuardia Community College</a></li>
+      </ul>
+    </div>
+
+    <!-- Working with Lists -->
+    <h2>Food Shopping (Regular)</h2>
+    <ul>
+      <li>Apple</li>
+      <li>Milk</li>
+    </ul>
+
+    <h2>Food Shopping (Bootstrap)</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Apple</li>
+      <li class="list-group-item active">Milk</li>
+    </ul>
+
+    <!-- Working with Images -->
+      <!-- The class, rounded, rounds out the image, similar to border-radius -->
+    <img class="rounded" src="images/photo1.jpg" alt="Image of Burrito">
+    <img class="rounded-circle" src="images/photo1.jpg" alt="Image of Burrito">
+    <img class="img-thumbnail" src="images/photo1.jpg" alt="Image of Burrito">
+
+      <!-- Aligning Images + Figure Captions -->
+    <figure>
+      <img class="mx-auto d-block" src="images/photo1.jpg" alt="Image of a Burrito">
+      <figcaption>Regular Figure</figcaption>
+    </figure>
+
+    <figure class="figure-img">
+      <img class="mx-auto d-block" src="images/photo1.jpg" alt="Image of a Burrito">
+      <figcaption class="figure-caption">Bootstrap Figcaption</figcaption>
+    </figure>
+
+    <!-- Working with Text -->
+    <!-- Different Fonts for Headings + using classes to make headings and subtitles -->
+      <!-- Can either use the tag or add it as a class! -->
+    <h1 class="text-danger">Eunsu (David) Kim - Activity 13: <mark style="background-color: lightgreen;">Bootstrap</mark></h1> <!-- mark is a highlight -->
+    <p class="h1">This is a paragraph.</p>
+    <p class="display-1">This is a paragraph.</p>
+
+    <!-- <kbd> element: Used to indicate input that is entered via the keyboard-->
+    <p>Use <kbd>Ctrl + S</kbd> to Save</p>
+
+    <!-- <blockquote> element + class: Used for inserting quotes.  -->
+    <p class="bg-info">Birds are a group of warm-blooded vertebrates constituting the class Aves.</p>
+
+    <blockquote cite="http://getbootstrap.com">
+      <p>Birds are a group of warm-blooded vertebrates constituting the class Aves.</p>
+      <p class="blockquote-footer">From Wikipedia.org</p>
+    </blockquote>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
