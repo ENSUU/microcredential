@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Activity 14 - jQuery</title>
+    <style media="screen">
+      * {
+        box-sizing: border-box;
+      }
+
+      .pBackground {
+        background-color: orange;
+      }
+
+      #addClass, #removeClass, #toggleClass {
+        padding: 0.5em 1em;
+        margin: 1em;
+        background-color: green;
+        color: lightgray;
+        border-radius: 12px;
+      }
+
+      .container {
+        border: inset 5px gray;
+        width: 300px;
+        height: 200px;
+      }
+
+      .circle {
+        width: 200px;
+        height: 200px;
+        background-color: purple;
+        padding: 2em;
+        text-align: center;
+        border-radius: 50%;
+        margin: 3em;
+        font-size: 1.1em;
+      }
+
+      .rectangle {
+        border-radius: 0%;
+        background-color: yellow;
+        border: dashed 10px olive;
+      }
+
+      /* Activity 14 */
+
+      .activityCircle, .activityRectangle {
+        display: inline-block;
+      }
+
+      .activityCircle {
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 1.1em;
+        background-color: lightgreen;
+        padding: 2.5em;
+        margin: 3em;
+        float: left;
+      }
+
+      .activityRectangle {
+        width: 400px;
+        height: 200px;
+        background-color: lightblue;
+        padding: 4em;
+        text-align: center;
+        font-size: 1.1em;
+        margin: 3em;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Activity 14 -->
+    <h1><u>Activity 14: jQuery Fundamentals</u></h1>
+    <div class="activityCircle">
+      Touch Me!
+    </div>
+    <div class="activityRectangle">
+      Click Me!
+    </div>
+    <hr>
+    <h1><u>Class Notes:</u></h1>
+    <!-- Example 7 - dblclick, resize, and hover events -->
+    <div class="circle" id="circle">
+      Mouse over to see the hover event. Also try to double click or resize the browser window.
+    </div>
+    <!-- Example 6 - Click Event -->
+    <button id="addClass">Add Class</button>
+    <button id="removeClass">Remove Class</button>
+    <button id="toggleClass">Toggle Class</button>
+    <div class="container"></div>
+    <!-- Example 1 -->
+    <h1>Basic jQuery Selectors</h1>
+    <section id="content">
+      <p>Selectors are used to select content within a webpage.</p>
+      <p>They use a very CSS-like syntax.</p>
+      <ul id="list1">
+        <h3>Fruits:</h3>
+        <li class="a">Apples</li>
+        <li class="a">Oranges</li>
+        <li class="b">Grapes</li>
+        <li class="b">Strawberries</li>
+      </ul>
+      <div id="example">
+        <p class="a">Paragraph 1</p>
+        <p id="para1">Paragraph 2</p>
+        <p class="b">Paragraph 3</p>
+        <p id="para4">Paragraph 4</p>
+        <p id="para5">Paragraph 5</p>
+      </div>
+    </section>
+
+    <!-- Need two script tags. One for linking jQuery, and another for our code.  -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function()  {
+
+        // Activity 14 - jQuery Fundamentals
+        // Generating a random color.
+        function randomColor() {
+          const rVal = Math.floor(Math.random() * 256)
+          const gVal = Math.floor(Math.random() * 256)
+          const bVal = Math.floor(Math.random() * 256)
+
+          return `rgb(${rVal}, ${gVal}, ${bVal})`
+        }
+
+        // mouseleave event - Circle:
+        let mouseLeaveCount = 0
+
+        $('.activityCircle').on('mouseleave', function() {
+          $('.activityCircle').css('background-color', randomColor)
+          $('.activityCircle').html(`<p>The mouse has left the circle <i><b>${++mouseLeaveCount}</b></i> times!</p>`)
+        })
+
+        // click event - Rectangle
+        let clickCount = 0
+
+        $('.activityRectangle').click(function() {
+          $('.activityRectangle').css('background-color', randomColor)
+          $('.activityRectangle').html(`<p>The square was clicked <i><b>${++clickCount}</b></i> times!</p>`)
+        })
+
+        // Class Notes:
+          // Everything inside this query will run when the document is ready
+        // Example 1:
+        $('#para1').css('border','3px solid red')
+        $('.a').css({'color':'magenta', 'padding':'0.5em 1em', 'background-color':'yellow'})
+
+        // Descendant Selectors
+        $('div > p:odd').css('background-color', 'orange')
+
+        // Adjacent Selectors
+        $('ul + div').css('border', 'ridge olive 10px')
+
+        // Advanced Filter Selectors
+        $("p:contains('3')").css({'border':'gray dashed 5px','font-family':'monotype corsiva'})
+
+        // Example 2 - DOM Tree Selectors
+        let elem = $('#para1')
+
+        elem.prev().css('border', '10px dotted blue')
+
+        // Example 3 - Change Content of an element
+        $('#para5').html("<p>HELLO WORLD!</p>")
+
+        // Example 4 - Append (attach after) and Prepend (attach before)
+        $('#para4').append(' New Content!')
+        $('#para4').prepend('Hey There! ')
+
+        // Example 5 - before and after
+        $('#example').before('/*/*/*/*/*/* BEFORE /*/*/*/*/*/*')
+        $('#example').after('/*/*/*/*/*/* AFTER /*/*/*/*/*/*')
+
+        // Example 6 -  Adding a click Event + adding/removing classes to/from elements
+        $('#addClass').click(function() {
+          $('.container').addClass('pBackground')
+        })
+
+        $('#removeClass').click(function() {
+          $('.container').removeClass('pBackground')
+        })
+
+        $('#toggleClass').click(function() {
+          $('.container').toggleClass('pBackground')
+        })
+
+        // Example 7 - Mouse events: mouseover or mouseleave
+        $('.container').on('mouseover mouseleave', mouseEffect)
+
+        function mouseEffect() {
+          $('.container').toggleClass('pBackground')
+        }
+
+        // double-click, hover, or resize events
+          // This is an automatic function - will run automaticallyy.
+        $(function() {
+          $('#circle').dblclick(fnDoubleClick)
+          $('#circle').hover(fnHover)
+          $(window).resize(fnResize)
+        })
+
+        function fnDoubleClick() {
+          $('#circle').toggleClass('rectangle')
+          $('#circle').html('<h3>Double Clicked!</h3>')
+        }
+
+        function fnHover() {
+          $('#circle').toggleClass('rectangle')
+          $('#circle').html('<h3>Hover Event</h3>')
+        }
+
+        function fnResize() {
+          $('#circle').html('<h3>Resize Browser Window Event</h3>')
+        }
+      })
+    </script>
+  </body>
+</html>
