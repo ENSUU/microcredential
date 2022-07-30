@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Eunsu (David) Kim: Activity 15</title>
+    <style media="screen">
+      .catFactButton, .reset {
+        color: white;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 12px;
+      }
+
+      .catFactButton {
+        background-color: crimson;
+      }
+
+      .catFactButton:hover {
+        background-color: red ;
+      }
+
+      .reset {
+        background-color: forestgreen;
+      }
+
+      .reset:hover {
+        background-color: lightgreen;
+      }
+
+      .catFactContainer:hover, .reset:hover {
+        box-shadow: 0px 0px 0px 2px gray;
+      }
+
+      .catFactContainer {
+        background-color: lightgray;
+        text-align: center;
+        padding: 2em;
+        width: 40%;
+        height: 450px;
+      }
+
+      .title {
+        margin-bottom: 3em;
+      }
+
+      .catFact {
+        font-size: 24px;
+        margin: 2em;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Eunsu (David) Kim: Activity 15</h1>
+    <!-- Activity 15 -->
+    <button class="catFactButton" type="button" name="button">Click to Get Cat Fact</button>
+    <button class="reset" type="button" name="button">Clear and Reset</button>
+    <div class="catFactContainer">
+      <h1 class="title">Cat Facts 🐈</h1>
+      <h2 class="factCount hidden">0</h2>
+      <p class="catFact hidden"></p>
+    </div>
+    <!-- Axios script tag -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- jQuery script tag -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+      // Activity 15
+      // Initializing a counter for the fact number.
+      let factCounter = 0
+
+      // Initializing an empty string to be filled with a random cat fact from async function.
+      let generatedFact = ""
+
+      // Async function which calls API; Obtains the random cat fact and assigns it to catFact variable.
+      const fact = async() => {
+        const response = await axios.get('https://catfact.ninja/fact')
+        generatedFact = response.data.fact
+      }
+
+      // Preliminary generation of random cat fact.
+      fact()
+      $('.catFact').text(generatedFact)
+
+      //  click event listener added to red button; Generates a random cat fact each time its clicked + increments the counter
+      $('.catFactButton').click(function() {
+
+        fact()
+
+        if (factCounter === 0) {
+          factCounter += 1
+          $('.factCount').text(`${factCounter}.`)
+          $('.catFact').text(generatedFact)
+          $('.catFact').removeClass('hidden')
+          $('.factCount').removeClass('hidden')
+        }
+        else {
+          factCounter += 1
+          $('.factCount').text(`${factCounter}.`)
+          $('.catFact').text(generatedFact)
+        }
+      })
+
+      // click event listener added to green button; Resets fact counter and facts
+      $('.reset').click(function() {
+        $('.factCount').addClass('hidden')
+        $('.catFact').addClass('hidden')
+        factCounter = 0
+        $('.catFact').text("")
+      })
+
+      // Making a specific request using API headers
+      const getYear = async() => {
+        const config = {headers: {Accept: 'application/json'}}
+        const res = await axios.get('https://swapi.dev/api/people/1/')
+        console.log("Using headers in axios. Name:", res.data.name, "Birth Year:", res.data.birth_year)
+      }
+
+      // Choosing a specific response
+      const personID = async(id) => {
+        try {
+          const res = await axios.get(`https://swapi.dev/api/people/${id}/`)
+          console.log(res.data)
+        } catch (e) {
+          console.log("ERROR", e)
+        }
+      }
+
+      // Making request using Axios
+      let axio = axios.get("https://swapi.dev/api/people/1/")
+      // console.log("Request using axios", axio)
+      .then(res => {
+        console.log("RESPONSE using axios", res)
+      })
+
+      // Making multiple requests using fetch + try and catch statement
+      const loadPeople = async() => {
+        try {
+          const res = await fetch("https://swapi.dev/api/people/1/")
+          const data = await res.json()
+          console.log(`Multiple response using fetch, 1st Person`, data)
+
+          const res2 = await fetch("https://swapi.dev/api/people/2/")
+          const data2 = await res2.json()
+          console.log(`Multiple response using fetch, 2nd Person`, data2)
+        } catch (e) {
+          console.log("ERROR", e)
+        }
+      }
+
+      // Making an AJAX request using fetch - New Method
+      fetch("https://swapi.dev/api/people/1/")
+      .then((res) => {
+        console.log("LOADED -> using fetch", res)
+        res.json().then((data) => console.log("JSON result using fetch", data))
+      })
+
+      // Making a request using XHR - Old Method
+      const req = new XMLHttpRequest();
+
+      req.onload = function() {
+        console.log('LOADED! -> using XHR');
+        // console.log(this.responseText)
+
+        const person = JSON.parse(this.response)
+        console.log(`NAME: ${person.name}, HEIGHT: ${person.height}`)
+      }
+
+      req.onerror = function() {
+        console.log('ERROR!');
+        console.log(this)
+      }
+
+      req.open("GET", "https://swapi.dev/api/people/1/");
+      req.send();
+    </script>
+  </body>
+</html>
